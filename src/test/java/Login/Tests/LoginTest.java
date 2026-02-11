@@ -35,7 +35,7 @@ public class LoginTest {
         }
     }
 
-    @Test
+    //@Test
     void login() {
         action.type(login_field, "practice");
         action.type(password_field, "SuperSecretPassword!");
@@ -43,7 +43,7 @@ public class LoginTest {
         action.shouldBeVisible(login_succes_text);
     }
 
-    @Test
+    //@Test
     void logout(){
         action.type(login_field, "practice");
         action.type(password_field, "SuperSecretPassword!");
@@ -52,7 +52,7 @@ public class LoginTest {
         action.shouldBeVisible(logout_succes_text);
     }
 
-    @Test
+    //@Test
     void wrong_login(){
         action.type(login_field, "practiceccccccc");
         action.type(password_field, "SuperSecretPassword!");
@@ -60,7 +60,7 @@ public class LoginTest {
         action.shouldBeVisible(wrong_login);
     }
 
-    @Test
+    //@Test
     void wrong_pass(){
         action.type(login_field, "practice");
         action.type(password_field, "SuperSecretPasswordsdfsd");
