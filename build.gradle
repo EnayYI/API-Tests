@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version '2.12.0'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+def allureVersion = "2.25.0"
+
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter:5.14.2"
+    testImplementation "org.seleniumhq.selenium:selenium-java:4.40.0"
+    testImplementation "io.github.bonigarcia:webdrivermanager:6.3.3"
+    testImplementation "io.qameta.allure:allure-junit5:2.32.0"
+    testImplementation 'io.rest-assured:rest-assured:5.4.0'
+    testImplementation platform("io.qameta.allure:allure-bom:$allureVersion")
+    testImplementation "io.qameta.allure:allure-rest-assured"
+}
+
+test {
+    useJUnitPlatform()
+}
